@@ -1,0 +1,423 @@
+html {
+    font-size: 16px;
+    font-family: 'Open Sans',
+        'Noto Sans TC',
+        "PingFang TC",
+        "微軟正黑體",
+        "蘋果儷中黑",
+        'sans-serif',
+        Arial;
+    font-weight: 600;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.hide {
+    display: none;
+}
+
+/* --------------00nav Start----------------------------------*/
+body {
+    position: relative;
+    background-color: #ffffff;
+}
+
+
+#OpeningPage {
+    position: absolute;
+    background: linear-gradient(180deg, rgba(202, 0, 14) 0%, rgba(84, 8, 14) 100%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    animation-name: OpeningShow;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes OpeningShow {
+    0% {
+        top: 100vh;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+
+#OpeningLogo {
+    position: absolute;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-60%) translateY(-50%);
+    cursor: pointer;
+    opacity: 0;
+    animation-name: LogoShow;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes LogoShow {
+    0% {
+        opacity: 0.2;
+        transform: translateX(-60%) translateY(-50%);
+        top: 70%;
+        left: 50%;
+    }
+
+    /* 25% {
+        opacity: 0.4;
+        transform: scale(0.5) translateX(-100%) translateY(-50%);
+        top: 65%;
+        left: 50%;
+
+    } */
+
+    50% {
+        opacity: 0.6;
+        transform: translateX(-60%) translateY(-50%);
+        top: 60%;
+        left: 50%;
+
+    }
+
+    /* 
+    75% {
+        opacity: 0.8;
+        transform: scale(0.7) translateX(-100%) translateY(-50%);
+        top: 55%;
+        left: 50%;
+
+    } */
+
+    100% {
+        opacity: 1;
+        transform: translateX(-60%) translateY(-50%);
+        top: 50%;
+        left: 50%;
+
+    }
+}
+
+
+#OpeningPage .footer {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #ffffff;
+    font-size: 12px;
+    opacity: 0;
+
+
+    animation-name: FooterShow;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes FooterShow {
+    0% {
+        opacity: 0;
+        top: 100%
+    }
+
+    100% {
+        opacity: 1;
+        top: 95%;
+    }
+}
+
+
+/* --------------------------------Opening End-------------------------- */
+
+
+
+
+
+
+/* ------------------------------------Log-inPage Large--------------------------  */
+#LoginPage {
+    background: linear-gradient(180deg, rgba(128, 0, 9, 0.2) 0%, rgba(46, 3, 7, 0.8) 100%), url(../image/login/bk_1.jpg) no-repeat center/cover;
+    width: 100%;
+    height: 100vh;
+    color: #ffffff;
+    font-weight: 500;
+    position: relative;
+    display: none;
+}
+
+#LoginPage .footer {
+    position: absolute;
+    width: 100%;
+    top: 95%;
+    text-align: center;
+}
+
+
+.row {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.LoginPageleft {
+    height: auto;
+    margin-right: 50px;
+    padding: 0;
+    text-align: center;
+}
+
+.LoginLogo {
+    width: 60%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.Discount {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    height: auto;
+}
+
+.Discountitem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.Discountitem:first-of-type {
+    margin-bottom: 0;
+}
+
+.Discountitem img {
+    width: 60px;
+    height: 60px;
+}
+
+.DiscountContent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 60px;
+    width: 60%;
+    text-align: left;
+}
+
+.DiscountContent p {
+    margin: 0;
+    width: 100%;
+    font-weight: 600;
+}
+
+.Discountbtn {
+    background-color: #A30000;
+    border: 0;
+    width: 20%;
+    height: 60px;
+    border-radius: 13px;
+}
+
+.Discountbtn a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.Contactus {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+}
+
+.Contactus h3 {
+    width: 100%;
+    font-size: 2rem;
+    padding-top: 20px;
+}
+
+.Contactus p {
+    margin-right: 20px;
+}
+
+.LoginPageright {
+    padding: 40px;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 35px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Loginsystem {
+    text-align: center;
+}
+
+.Loginsystem a {
+    font-weight: 600;
+    color: #1E1E1E;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.LoginPageright h3 {
+    color: black;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+.LoginContent {
+    position: relative;
+}
+
+.LoginContent input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    border: 1px solid #696969;
+    border-radius: 10px;
+    outline: #696969;
+    padding-left: 10px;
+}
+
+.LoginContent input::placeholder {
+    font-weight: 600;
+}
+
+
+
+
+#passwordshow {
+    position: absolute;
+    top: 75px;
+    left: 90%;
+}
+
+.LoginContent p {
+    text-align: end;
+}
+
+.LoginContent a:first-of-type {
+    border-right: 1px solid black;
+}
+
+.Loginiconrow {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 2px solid #B3B3B3;
+}
+
+.Loginicon {
+    display: flex;
+    width: auto;
+}
+
+.Loginicon img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.loginbtn {
+    width: 100px;
+    height: 50px;
+    background-color: #A30000;
+    border-radius: 13px;
+    border: 0;
+    color: #FFFFFF;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* ----------------------------RWD----------------------------------- */
+@media(max-width:1440px) {
+    .Loginicon {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .Loginiconrow {
+        justify-content: center;
+    }
+}
+
+@media(max-width:1200px) {}
+
+
+@media(max-width:992px) {
+
+    #OpeningLogo {
+        width: 80%;
+        object-fit: cover;
+    }
+
+
+    #LoginPage {
+        height: auto;
+    }
+
+    .row {
+        height: auto;
+    }
+
+    .LoginLogo {
+        width: 50%;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .LoginPageright {
+        padding: 20px;
+    }
+
+    .Discountitem {
+        width: 80%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .Discountbtn {
+        width: 40%;
+        margin: 0 20px;
+    }
+
+    .Discountitem:last-of-type {
+        margin-bottom: 80px;
+    }
+
+}
+
+@media(max-width:768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+
+@media(max-width:576px) {}

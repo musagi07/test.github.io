@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #div-show {
+            position: relative;
+            width: 100%;
+            height: 70%;
+            background-color: black;
+            text-align: center;
+        }
+
+        #div-show img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #btnPrev {
+            width: 30px;
+            height: 30px;
+            background-image: url("images/icon/prev.png");
+            background-size: cover;
+            position: absolute;
+            top: 40%;
+            left: 5px;
+        }
+
+        #btnNext {
+            width: 30px;
+            height: 30px;
+            background-image: url("images/icon/next.png");
+            background-size: cover;
+            position: absolute;
+            top: 40%;
+            right: 5px;
+        }
+
+        #div-select {
+            width: 60%;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            right: 10%;
+        }
+
+        #div-select div {
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin-left: 15px;
+        }
+
+        .round {
+            border-radius: 50%;
+            background-color: rgb(209, 39, 39);
+            transition: 1.5s;
+        }
+
+        .addBorder {
+            border-width: 2px;
+            border-color: blueviolet;
+            border-style: solid;
+            background-color: rgb(236, 171, 171);
+            margin-top: -10px;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        var select = 1;
+        var preSelect = 1;
+        var Mpage = 13;
+        var timer = null;
+
+
+        // 網頁載入完成執行
+        $(document).ready(function () {
+            $("#div-select").empty();
+            // 將預覽圖div1~div13新增到#div-select元素
+            for (var i = 1; i <= 13; i++) {
+                $("#div-select").append
+                    (
+                        "<div id='div" + i + "' class='round'></div>"
+                    );
+                // 預覽圖區塊div1~div13新增click事件處理函式fnChange
+                // 按下預覽圖會傳送num參數，此參數為圖片編號
+                $("#div" + i).on("click", { num: i }, fnChange1);
+            }
+            // 判斷往左與右鈕是否出現
+            fnChange();
+            // 按下往左鈕執行fnPrev函式
+            $("#btnPrev").on("click", fnPrev);
+            // 按下往右鈕執行fnNext函式
+            $("#btnNext").on("click", fnNext);
+            timer = setInterval(fnNext, 2000);
+            $("#div-show").hover(function () {
+                clearInterval(timer);
+            }, function () {
+                timer = setInterval(fnNext, 2000);
+            }
+            );
+        })
+
+        function fnChange1(a) {
+            // 取得選取的圖片編號並組成完成圖檔
+            var filename = "images/pic_" + a.data.num + ".jpg"
+            select = a.data.num;
+            // 顯示圖片
+            $("#show").attr("src", filename);
+            // 呈現淡出動畫
+            $("#show").hide().fadeIn(1000);
+            $("#div" + select).addClass("addBorder");
+            $("#div" + preSelect).removeClass("addBorder");
+            preSelect = select;
+
+        }
+
+
+        function fnChange() {
+            // 取得選取的圖片編號並組成完成圖檔
+            $("#div" + preSelect).removeClass("addBorder");
+            $("#div" + select).addClass("addBorder");
+            var filename = "images/pic_" + select + ".jpg"
+
+            // 顯示圖片
+            $("#show").attr("src", filename);
+            // 呈現淡出動畫
+            $("#show").hide().fadeIn(1000);
+            preSelect = select;
+
+        }
+
+        // 往左鈕事件處理函式
+        function fnPrev() {
+            preSelect = select;
+            if (select <= 1) {
+                select = Mpage;
+            }
+            else {
+                select -= 1;
+            }
+            fnChange();
+        }
+        // 往右鈕事件處理函式
+        function fnNext() {
+            preSelect = select;
+            if (select >= Mpage) {
+                select = 1;
+            }
+            else {
+                select += 1;
+            }
+            fnChange();
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="div-show">
+        <img id="show" src="images/pic_1.jpg">
+        <div id="div-select">
+        </div>
+        <div id="btnPrev"></div>
+        <div id="btnNext"></div>
+    </div>
+    </div>
+
+</body>
+
+</html>

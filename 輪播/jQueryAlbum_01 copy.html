@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #div-show {
+            width: 100%;
+            height: 70%;
+            background-color: black;
+            text-align: center;
+        }
+
+        #div-show img {
+            height: 100%;
+        }
+
+        #div-cont {
+            position: relative;
+            width: 100%;
+            height: 30%;
+            overflow: hidden;
+        }
+
+        #btnPrev {
+            width: 30px;
+            height: 30px;
+            background-image: url("images/icon/prev.png");
+            background-size: contain;
+            position: absolute;
+            top: 40%;
+            left: 5px;
+        }
+
+        #btnNext {
+            width: 30px;
+            height: 30px;
+            background-image: url("images/icon/next.png");
+            background-size: cover;
+            position: absolute;
+            top: 40%;
+            right: 5px;
+        }
+
+        #div-select {
+            height: 100%;
+            width: 1000%;
+            position: absolute;
+            background-color: black;
+            left: 0%;
+            transition: 1.5s;
+        }
+
+        #div-select div {
+            height: 85%;
+            width: 240px;
+            float: left;
+            margin-left: 14px;
+            margin-top: 10px;
+        }
+
+        #div-select img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        var select = 0;
+        var sel_val = 0;
+        var Mpage = Math.floor(13 / 5);
+        // 網頁載入完成執行
+        $(document).ready(function () {
+            $("#div-select").empty();
+            // 將預覽圖div1~div13新增到#div-select元素
+            // $("#div-select").append
+            //     (
+            //         "<div id='div1'><img src='images/pic_1.jpg'></div>"
+            //     );
+            // $("#div-select").append
+            //     (
+            //         "<div id='div2'><img src='images/pic_2.jpg'></div>"
+            //     );
+            // $("#div-select").append
+            //     (
+            //         "<div id='div3'><img src='images/pic_3.jpg'></div>"
+            //     );
+            // $("#div-select").append
+            //     (
+            //         "<div id='div4'><img src='images/pic_4.jpg'></div>"
+            //     );
+            // $("#div-select").append
+            //     (
+            //         "<div id='div5'><img src='images/pic_5.jpg'></div>"
+            //     );
+            // $("#div-select").append
+            //     (
+            //         "<div id='div6'><img src='images/pic_6.jpg'></div>"
+            //     );
+            //Passing data to the handler, 即pass num給fnChange, fnChange可由event.data.num取得值
+            //https://api.jquery.com/on/
+            // 預覽圖區塊div1~div13新增click事件處理函式fnChange
+            // 按下預覽圖會傳送num參數，此參數為圖片編號
+            // $("#div1").on("click", { num: 1 }, fnChange);
+            // $("#div2").on("click", { num: 2 }, fnChange);
+            // $("#div3").on("click", { num: 3 }, fnChange);
+            // $("#div4").on("click", { num: 4 }, fnChange);
+            // $("#div5").on("click", { num: 5 }, fnChange);
+            // $("#div6").on("click", { num: 6 }, fnChange);
+            //
+
+            function fnChange(e) {
+                $("#show").attr("src", "images/pic_" + e.data.num + ".jpg");
+                $("#show").hide().fadeIn("fast");
+            }
+            //不一定要寫event
+
+            function iconShow() {
+                if (select >= 1) {
+                    $("#btnPrev").show();
+                } else {
+                    $("#btnPrev").hide();
+                }
+                if (select <= 1) {
+                    $("#btnNext").show();
+                } else {
+                    $("#btnNext").hide();
+                }
+            }
+
+            function fnPrev() {
+                select -= 1;
+                sel_val += 100;
+                $("#div-select").css("left", sel_val + "%");
+                iconShow();
+            }
+
+            function fnNext() {
+                select += 1;
+                sel_val -= 100;
+                $("#div-select").css("left", sel_val + "%");
+                iconShow();
+            }
+
+
+            //必須用on()來傳遞參數
+            for (i = 1; i <= 19; i++) {
+                $("#div-select").append(`<div id = "div${i}"><img src="images/pic_${i}.jpg" ></div>`);
+                $("#div" + i).on("click", { num: i }, fnChange);
+            }
+            // 畫面一載入時就必須判斷往左與右鈕是否出現  
+            iconShow();
+
+            // 按下往左鈕執行fnPrev函式
+            $("#btnPrev").on("click", fnPrev);
+            // 按下往右鈕執行fnNext函式
+            $("#btnNext").on("click", fnNext);
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div id="div-show">
+        <img id="show" src="images/pic_1.jpg">
+    </div>
+    <div id="div-cont">
+        <div id="div-select">
+        </div>
+        <div id="btnPrev"></div>
+        <div id="btnNext"></div>
+    </div>
+</body>
+
+</html>

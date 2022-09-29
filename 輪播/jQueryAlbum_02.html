@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #div-show {
+            width: 100%;
+            height: 70%;
+            background-color: black;
+            text-align: center;
+        }
+
+        #div-show img {
+            height: 100%;
+        }
+
+        #div-cont {
+            position: relative;
+            width: 100%;
+            height: 30%;
+            overflow: hidden;
+        }
+
+        #btnPrev {
+            width: 30px;
+            height: 30px;
+            background-image: url("images/icon/prev.png");
+            background-size: contain;
+            position: absolute;
+            top: 40%;
+            left: 5px;
+        }
+
+        #btnNext {
+            width: 30px;
+            height: 30px;
+            background-image: url("images/icon/next.png");
+            background-size: cover;
+            position: absolute;
+            top: 40%;
+            right: 5px;
+        }
+
+        #div-select {
+            height: 100%;
+            width: 1000%;
+            position: absolute;
+            background-color: black;
+            left: 0%;
+            transition: 1.5s;
+        }
+
+        #div-select div {
+            height: 85%;
+            width: 240px;
+            float: left;
+            margin-left: 14px;
+            margin-top: 10px;
+            padding: 2px;
+        }
+
+        #div-select img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .addborder {
+            border-width: 3px;
+            border-color: black;
+            border-style: solid;
+        }
+
+        .showborder {
+            border-color: blueviolet;
+        }
+    </style>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        var select = 0;
+        var sel_val = 0;
+        var i = 1;
+        function fnChange() {
+            $("#show").attr("src", "images/pic_" + i + ".jpg");
+            $("#show").hide().fadeIn("fast");
+            $("#div" + i).addClass("showborder");
+        }
+
+        function iconShow() {
+            if (select >= 1) {
+                $("#btnPrev").show();
+            } else {
+                $("#btnPrev").hide();
+            }
+            if (select <= 17) {
+                $("#btnNext").show();
+            } else {
+                $("#btnNext").hide();
+            }
+        }
+
+        function fnPrev() {
+            $("#div" + i).removeClass("showborder");
+            i--;
+            fnChange();
+            select -= 1;
+            sel_val += 264;
+            $("#div-select").css("left", sel_val + "px");
+            iconShow();
+        }
+
+        function fnNext() {
+            $("#div" + i).removeClass("showborder");
+            i++;
+            fnChange();
+            select += 1;
+            sel_val -= 264;
+            $("#div-select").css("left", sel_val + "px");
+            iconShow();
+        }
+
+        // 網頁載入完成執行
+        $(document).ready(function () {
+            $("#div-select").empty();
+            for (a = 1; a <= 18; a++) {
+                $("#div-select").append(`<div id = "div${a}" class ="addborder"><img src="images/pic_${a}.jpg" ></div>`);
+            }
+
+            $("#div" + i).on("load", fnChange());
+
+            // 畫面一載入時就必須判斷往左與右鈕是否出現  
+            iconShow();
+
+            // 按下往左鈕執行fnPrev函式
+            $("#btnPrev").on("click", fnPrev);
+            // 按下往右鈕執行fnNext函式
+            $("#btnNext").on("click", fnNext);
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div id="div-show">
+        <img id="show" src="images/pic_1.jpg">
+    </div>
+    <div id="div-cont">
+        <div id="div-select">
+        </div>
+        <div id="btnPrev"></div>
+        <div id="btnNext"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alata&family=Cabin+Sketch:wght@700&family=League+Spartan:wght@800&family=Noto+Sans+TC:wght@500;700;900&display=swap"
+    rel="stylesheet">
+  <title>戰國策會員登入</title>
+  <script src="./js/jquery-3.6.0.js"></script>
+  <link rel="stylesheet" href="./css/Login-page.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="./js/Login-page.js"></script>
+</head>
+
+<body>
+  <!------------ Log-in start ----------------->
+  <div class="container-fluid" id="OpeningPage">
+    <img id="OpeningLogo" src="./image/login/logo_big.png">
+    <p class="footer">Copyright © 2022 Jet-Go Consulting. All rights reserved.</p>
+  </div>
+  <div id="LoginPage">
+    <div class="container-fluid d-none d-lg-block">
+      <div class="row">
+        <div class="col-6 LoginPageleft">
+          <img class="LoginLogo" src="./image/login/logo_big.png">
+          <div class="Discount">
+            <div class="Discountitem">
+              <img src="./image/login/icon_1.png">
+              <div class="DiscountContent">
+                <p>老客戶加入本公司官方LINE</p>
+                <p>就贈送2,000元網路行銷購物回饋金!!!</p>
+              </div>
+              <button class="Discountbtn"><a href="">活動詳情請點我</a></button>
+            </div>
+            <div class="Discountitem">
+              <img src="./image/login/icon_2.png">
+              <div class="DiscountContent">
+                <p>新客戶(限企業客戶)加入本公司會員</p>
+                <p>就贈送1,000元儲值金!!!</p>
+              </div>
+              <button class="Discountbtn"><a href="">尊榮客戶福利請點我</a></button>
+            </div>
+          </div>
+          <div class="Contactus">
+            <h3>聯絡我們</h3>
+            <p>服務專線：02-77286078</p>
+            <p>業務專線：0800-003-191</p>
+            <p>公司傳真：02-23888286</p>
+          </div>
+        </div>
+        <div class="col-4 LoginPageright">
+          <div class="Loginsystem">
+            <h3>會員登入系統</h3>
+            <div class="LoginContent">
+              <form action="./JetGO_login_backstage.php" method="post">
+                <input type="email" id="Account" name="Account" placeholder="電子郵件位置(E-Mail Address)">
+                <input type="password" id="password" name="password" placeholder="密碼(Password)">
+                <img id="passwordshow" src="./image/login/Eyelashes3D.png">
+                <p><a href="">忘記帳號</a><a href="">忘記密碼</a></p>
+              </form>
+            </div>
+            <div class="Loginiconrow">
+              <div class="Loginicon">
+                <a href="#"><img src="./image/login/Component_1.png"></a>
+                <a href="#"><img src="./image/login/Component_2.png"></a>
+                <a href="#"><img src="./image/login/Component_3.png"></a>
+              </div>
+              <button class="loginbtn">註冊</button>
+              <button class="loginbtn">登入</button>
+            </div>
+            <a href="">點我返回官網</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------------------------------RWD max-width 992  以下的版本------------------------------------------------>
+    <div class="container-fluid  d-block d-lg-none">
+      <div class="row">
+        <img class="LoginLogo" src="./image/login/logo_big.png">
+        <div class="col-10 col-sm-8 LoginPageright">
+          <div class="Loginsystem">
+            <h3>會員登入系統</h3>
+            <div class="LoginContent">
+              <input type="email" id="Account" name="Account" placeholder="電子郵件位置(E-Mail Address)">
+              <input type="password" id="password" name="password" placeholder="密碼(Password)">
+              <img id="passwordshow" src="./image/login/Eyelashes3D.png">
+              <p><a href="">忘記帳號</a> <a href="">忘記密碼</a></p>
+            </div>
+            <div class="Loginiconrow">
+              <div class="Loginicon">
+                <a href="#"><img src="./image/login/Component_1.png"></a>
+                <a href="#"><img src="./image/login/Component_2.png"></a>
+                <a href="#"><img src="./image/login/Component_3.png"></a>
+              </div>
+              <button class="loginbtn">註冊</button>
+              <button class="loginbtn">登入</button>
+            </div>
+            <a href="">點我返回官網</a>
+          </div>
+        </div>
+        <div class="Discountitem">
+          <img src="./image/login/icon_1.png">
+          <div class="DiscountContent">
+            <p>老客戶加入本公司官方LINE</p>
+            <p>就贈送2,000元網路行銷購物回饋金!!!</p>
+          </div>
+        </div>
+        <div class="Discountitem">
+          <img src="./image/login/icon_2.png">
+          <div class="DiscountContent">
+            <p>新客戶(限企業客戶)加入本公司會員</p>
+            <p>就贈送1,000元儲值金!!!</p>
+          </div>
+        </div>
+        <div class="Discountitem">
+          <button class="Discountbtn"><a href="">活動詳情請點我</a></button>
+          <button class="Discountbtn"><a href="">尊榮客戶福利請點我</a></button>
+        </div>
+      </div>
+    </div>
+    <p class="footer">Copyright © 2022 Jet-Go Consulting. All rights reserved.</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

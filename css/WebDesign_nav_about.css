@@ -1,0 +1,1539 @@
+@font-face {
+    font-family: 'Icons Social Media 8';
+    src: url("/css/fonts/DFLiHeiStd-W3.otf") format("truetype");
+}
+
+html {
+    font-size: 18px;
+    font-family: 'DFLiHeiStd W3', 'Open Sans',
+        'Noto Sans TC',
+        "PingFang TC",
+        "蘋果儷中黑",
+        "微軟正黑體",
+        'sans-serif',
+        Arial;
+}
+
+
+body {
+    position: relative;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+
+/* -----------------------00-1 navlist start----------------------- */
+#navlist {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #353535;
+    margin: 0;
+    padding: 0;
+    word-break: normal;
+    height: auto;
+    text-align: left;
+    overflow-x: hidden;
+    letter-spacing: .5px;
+    font-weight: 500;
+    display: none;
+    z-index: 6;
+}
+
+#navlist section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    /* height: 300px; */
+    padding: 20px;
+    border-bottom: 1px solid white;
+    align-items: center;
+    transition: 0.5s linear;
+    font-weight: 600;
+}
+
+#navlist section:hover {
+    transform: scale(1.1);
+    background-color: #262525;
+}
+
+#navlist .top-section {
+    justify-content: flex-end;
+    border-bottom: none;
+    height: 150px;
+}
+
+#navlist section a {
+    text-decoration: none;
+    color: #ffffff8a;
+    padding-right: 10px;
+}
+
+#navlist section a:hover {
+    color: #ffffff;
+}
+
+
+#navlist #navlist-top ul {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    text-align: right;
+    color: #ffffff;
+    margin-top: -100px;
+}
+
+#navlistCancel {
+    border: 1px solid #ffffff;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50%;
+    font-size: 1rem;
+    line-height: 15px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#navlist section .navlist-title {
+    color: #ffffff8a;
+}
+
+#nav-list-content {
+    margin-top: 1000px;
+}
+
+#nav-list-content h1 {
+    margin: 0;
+}
+
+#nav-list-content section .navlist-item ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 0;
+}
+
+.navlist-item ul li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-right: 10px;
+    margin: 5px 0;
+    height: auto;
+    min-height: 50px;
+    width: 33%;
+    box-sizing: border-box;
+}
+
+.navlist-item ul li a {
+    width: 100%;
+}
+
+#homestart {
+    display: none;
+}
+
+/* -----------------------00-1 navlist end----------------------- */
+/* --------------00-2 nav Start----------------------------------*/
+
+
+#navdiv {
+    background-color: #A30000;
+    font-size: 1rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+}
+
+#menu {
+    width: 100%;
+    height: 100px;
+    background-color: none;
+    flex-wrap: nowrap;
+    border-radius: 0px;
+    align-items: center;
+    padding: 0;
+}
+
+#menu .nav_left img {
+    width: 150px;
+    height: 50px;
+}
+
+
+
+#menu ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+}
+
+#menu ul p {
+    padding: 0;
+    margin: 0;
+    transition: 0.5s ease-in-out;
+    height: 22px;
+}
+
+#menu ul a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#menu ul p::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.5s ease-in-out;
+}
+
+#menu ul p:hover {
+    margin-top: -10px;
+}
+
+
+#menu ul p:hover::after {
+    width: 100%;
+}
+
+
+.nav_center ul {
+    justify-content: space-between;
+}
+
+.nav_right {
+    text-align: right;
+    padding: 0;
+}
+
+.nav_right ul {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.nav_right ul li {
+    margin-left: 10px;
+}
+
+.nav_right ul li img {
+    width: 22x;
+    height: 22px;
+}
+
+#navicon01 {
+    background-color: #ffffff;
+    border-radius: 10px 10px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 32px;
+    color: #A30000;
+    transition: 0.5s ease-in-out;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+
+#navicon02 {
+    background-color: #ffffff;
+    border-radius: 64px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    /* font-size: 1rem; */
+    color: #A30000;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+
+#navicon01:hover {
+    transform: scale(1.1);
+}
+
+
+#navicon02:hover {
+    transform: scale(1.1);
+}
+
+/* -----------------------00-2 nav end----------------------------- */
+/* -----------------------00-3 navad start----------------------------- */
+
+.messagebox {
+    z-index: 8;
+    position: fixed;
+    right: 100px;
+    background-color: #f4f5f7;
+    border-radius: 20px;
+    width: 300px;
+    height: auto;
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.354);
+    font-weight: 600;
+    display: none;
+}
+
+#linebox {
+    bottom: 240px;
+
+}
+
+#phonebox {
+    bottom: 170px;
+
+}
+
+#chatbox {
+    bottom: 100px;
+}
+
+.boxtitle {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 50px;
+    padding: 0 30px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boxcontent {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.7rem;
+}
+
+
+.box_Line_Content img {
+    border: 1px solid #353535;
+    padding: 10px;
+    width: 250px;
+    height: 250px;
+}
+
+.boxcontent h3 {
+    padding-top: 10px;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.boxcontent p {
+    padding-top: 10px;
+    margin: 0;
+}
+
+.boxcontent a {
+    margin-left: 30px;
+    font-size: 0.5rem;
+}
+
+.box_Line {
+    background-color: rgb(0, 195, 0);
+}
+
+.box_phone {
+    background-color: rgb(123, 29, 1);
+}
+
+.box_chat {
+    background-color: rgb(25, 69, 189);
+}
+
+.box_phone_Content h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
+}
+
+
+/*  滾動條可以用css調整!!!! -->-webkit-scrollbar*/
+/* 可參考https: //www.tpisoftware.com/tpu/articleDetails/2630 */
+#chatroom {
+    width: 100%;
+    height: 300px;
+    max-height: 400px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #c1bebeca;
+    margin-top: 10px;
+}
+
+/* 不用加任何主體(不要用&::) */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    margin: 5px 0 0 0;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgb(219, 219, 219);
+}
+
+/* scroll-bar改法如上 */
+
+.box_chat_Content {
+    padding: 15px;
+}
+
+.server {
+    display: flex;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+
+.chatroom_pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50% 50%;
+    background-size: cover;
+    flex-shrink: 0;
+    background-size: 35px 35px;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.chatroom_msg {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 10px;
+    align-items: flex-start;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    text-align: left;
+    flex-shrink: 0;
+    width: 200px;
+    word-break: break-all;
+}
+
+/*  word-break: break-all 這非常重要!!!!
+當使用flex 當容器時一定要加!! 因為flex不會判讀英文和數字，連續數字或英文會
+讓電腦以為偷是同一個單字，結果就是不會換行
+*/
+
+
+.chatroom_msg p {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.server_msg {
+    position: relative;
+    background-color: #c1bebeca;
+}
+
+
+.server_pic {
+    background-image: url(../image/home/server.png);
+    background-color: #e6ecf6;
+    margin-right: 5px;
+}
+
+.server a {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+.guest {
+    margin-left: 50px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+.guest_pic {
+    background-image: url(../image/home/guest.png);
+    background-color: #d7d7dc;
+    margin-left: 5px;
+}
+
+.guest_msg {
+    color: #fff;
+    background-color: rgb(25, 69, 189);
+    order: -1;
+    position: relative;
+}
+
+.guest_msg::before,
+.server_msg::before {
+    content: '';
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    top: 10px;
+
+}
+
+.guest_msg::before {
+    border-left: 10px solid rgb(25, 69, 189);
+    right: -10px;
+}
+
+.server_msg::before {
+    border-right: 10px solid #c1bebeca;
+    left: -10px
+}
+
+
+.message_col {
+    width: 100%;
+    height: 30px;
+    background-color: #f4f5f7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px
+}
+
+#message_guest {
+    width: 220px;
+    border: 0;
+    height: 30px;
+    background-color: #f4f5f7;
+    outline: #c1bebeca;
+}
+
+
+
+#send_msg {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background-color: transparent
+}
+
+#phonecross,
+#linecross,
+#chatcross {
+    cursor: pointer;
+}
+
+
+
+
+.nav_righticon {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 50%;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.354);
+    z-index: 8;
+    object-fit: cover;
+    display: none;
+    transition: 1s linear;
+}
+
+#nav_close {
+    display: block;
+    background-image: url(../image/home/call_icon_con.svg);
+    background-size: cover;
+}
+
+/* 這樣沒辦法修改框線 */
+/* #nav_close:hover::before {
+    content: attr(title);
+    position: fixed;
+    right: 100px;
+    bottom: 30px;
+    max-width: 160px;
+    height: auto;
+    padding: 5px;
+    background-color: #FFFFCC;
+    border: 1px solid #353535;
+    border-radius: 10px;
+    z-index: 9;
+    font-size: 0.8rem;
+} */
+
+
+#nav_close_title {
+    position: fixed;
+    right: 100px;
+    bottom: 30px;
+    max-width: 200px;
+    height: auto;
+    padding: 5px;
+    background-color: #FFFFCC;
+    border-radius: 10px;
+    z-index: 9;
+    display: none;
+    font-size: 0.8rem;
+    box-shadow: 1px 1px 1px 2px #000000;
+}
+
+#nav_close_title div::after {
+    content: '';
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    border-left: 10px #FFFFCC;
+}
+
+/* -----------------------00-2 nav end----------------------------- */
+/* -----------------------01 section01 start--------------------- */
+.fillingbox {
+    background-color: rgba(202, 0, 14, 1);
+    width: 100%;
+    height: 100px;
+}
+
+
+#section01 {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../image/about/tittle_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.page01content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.page01content {
+    text-align: center;
+}
+
+.page01content img:first-of-type {
+    width: 100%;
+    object-fit: contain;
+    padding-bottom: 30px;
+}
+
+.page01content p {
+    width: 100%;
+    padding: 3%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 100px;
+}
+
+#arrowdown {
+    width: 90px;
+}
+
+
+/* -----------------------01 section01 end----------------------- */
+/* -----------------------02 section02 start--------------------- */
+
+#section02 {
+    background: #ffffff;
+    padding: 0;
+}
+
+.page02content {
+    width: 100%;
+    height: 700px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.shake_hand img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+.cont h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* -----------------------02 section02 end----------------------- */
+/* -----------------------03 section03 start--------------------- */
+#section03 {
+    background: #B3B3B3;
+    padding: 0;
+    width: 100%;
+    height: 1200px;
+}
+
+.page03content {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.page03article {
+    width: 60%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50px;
+    font-weight: 600;
+}
+
+.page03bk {
+    background: url(../image/about/about_3.jpg) no-repeat center/cover;
+    width: 100%;
+    height: 1200px;
+}
+
+.page03article h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+}
+
+.page03article h4 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #A30000;
+}
+
+
+/* -----------------------03 section03 end----------------------- */
+/* -----------------------04 section04 start--------------------- */
+
+#section04 {
+    padding: 0;
+    width: 100%;
+    height: 1600px;
+    position: relative;
+    z-index: 0;
+    background: linear-gradient(#ffffff 0%, #ffffff 90%, #A30000 90%, #A30000 100%);
+    border-bottom: 1px solid #A30000;
+}
+
+
+.page04bk {
+    position: absolute;
+    top: 22%;
+    width: 100%;
+    z-index: -1;
+}
+
+.bk {
+    width: 100%;
+    height: auto;
+}
+
+.page04article {
+    width: 100%;
+    text-align: center;
+    height: 400px;
+    display: flex;
+}
+
+.page04article h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.page04article p:last-of-type {
+    padding-bottom: 50px;
+}
+
+.page04section01 {
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* --------------------------輪轉區輪播--------------------------- */
+
+
+.article4_A {
+    width: 100%;
+}
+
+.article4_slider {
+    width: 100%;
+}
+
+
+.slider {
+    width: 80%;
+    position: relative;
+}
+
+.slider-item {
+    width: 530px;
+    padding: 20px 0 25px 30px;
+    opacity: 0;
+    z-index: 0;
+    position: absolute;
+    left: 37%;
+    top: 50%;
+
+}
+
+.slider-item .animation-card_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.slider-item .animation-card_image img {
+    width: 100%;
+    height: 100%;
+}
+
+/* --------------------------輪轉區輪播 end--------------------------- */
+
+
+
+
+.page04section03 {
+    color: #ffffff;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+
+.page04section04 {
+    background-color: #A30000;
+}
+
+
+.cards_B {
+    padding-top: 50px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardscontent_B {
+    text-align: center;
+}
+
+.cardscontent_B img {
+    width: 160px;
+    height: 160px;
+}
+
+.cardscontent_B p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding-top: 20px;
+    color: #fff;
+}
+
+
+/* -----------------------04 section04 end----------------------- */
+/* -----------------------06 section06 start--------------------- */
+
+#section06 {
+    border-top: 1px solid #A30000;
+    background: #A30000;
+    padding: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.page06content {
+    position: relative;
+}
+
+.page06content .row {
+    height: 1000px;
+
+}
+
+
+
+.page06article h1 {
+    font-size: 50px;
+    font-weight: bold;
+    padding: 20px;
+    color: #fff;
+}
+
+.page06article p {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.page06article p:first-of-type {
+    margin-bottom: 20px;
+}
+
+.trophy {
+    height: 100%;
+    max-width: 700px;
+    max-height: 980px;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+    background-image: url(../image/about/price.png);
+    background-size: cover;
+    z-index: 1;
+}
+
+/* -----------------------footer start--------------------- */
+.footersection01 {
+    width: 100%;
+    height: 200px;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-end;
+    flex-shrink: 0;
+}
+
+.footersection01 h3 {
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.contactphone {
+    width: 80%;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contactphone p {
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.footersection02 {
+    width: 100%;
+    height: 100px;
+    background-color: #A30000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.footersection02 p {
+    margin-bottom: 0;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-right: 10px;
+}
+
+.footersection02 img {
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
+}
+
+.footersection02row {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactmedia {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30px;
+}
+
+.contactmedia img {
+    margin-left: 10px;
+    width: 36px;
+    height: 36px;
+}
+
+.subscriptionpaper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30px;
+}
+
+.subscriptionpaper_input {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.subscriptionpaper input {
+    height: 30px;
+    background-color: #ffffff;
+    padding: 0 5px;
+    outline: none;
+}
+
+.subscriptionpaper button {
+    width: 55px;
+    height: 30px;
+    background-color: rgba(84, 8, 14, 1);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* ----------------------------RWD----------------------------------- */
+
+@media(max-width:1600px) {
+    .page04bk {
+        top: 25%;
+    }
+}
+
+
+
+@media(max-width:1500px) {
+    .page04bk {
+        top: 30%;
+    }
+}
+
+
+
+@media(max-width:1399px) {
+
+    /* ------------------page04--------------------- */
+    /* ------------------------輪轉區輪播-------------------- */
+
+    .slider {
+        width: 80%;
+    }
+
+    .slider-item {
+        width: 400px;
+        left: 40%;
+    }
+
+    /* -----------------footer------------- */
+
+    .footersection02row {
+        justify-content: space-between;
+    }
+
+    .footersection02 {
+        justify-content: space-around;
+    }
+
+    .contactmedia {
+        justify-content: flex-start;
+        margin: 0;
+    }
+
+    .contactmedia p {
+        margin-right: 10px;
+    }
+
+    .subscriptionpaper_input {
+        width: 70%;
+    }
+
+    .subscriptionpaper_input input {
+        margin-left: 0;
+        flex-grow: 1;
+    }
+
+    .subscriptionpaper {
+        justify-content: flex-end;
+    }
+
+}
+
+@media(max-width:1199px) {
+
+    /* ------------------page04--------------------- */
+    #section04 {
+        height: 1850px;
+    }
+
+    .slider-item {
+        width: 350px;
+    }
+
+
+    .page04section04 {
+        height: 700px;
+    }
+
+    .cards_B {
+        width: 100%;
+        height: 700px;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+    }
+
+    .cardscontent_B {
+        width: 250px;
+    }
+
+    /* ------------- 01 secion06 start ------------------- */
+    .page06content .row {
+        height: auto;
+        justify-content: center;
+    }
+
+    .page06article {
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    /* -----------------footer------------- */
+    .subscriptionpaper_input {
+        width: auto
+    }
+
+}
+
+
+@media(max-width:992px) {
+
+    /* --------------nav------------------ */
+    #nav-list-content section {
+        height: auto;
+    }
+
+    #nav-list-content h1 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+
+    .navlist-item {
+        margin-left: 30px;
+    }
+
+    .navlist-item ul li {
+        padding-right: 10px;
+        margin: 5px 0;
+    }
+
+    /* --------------nav------------------ */
+    #menu {
+        justify-content: space-between;
+    }
+
+    .nav_center ul {
+        text-align: right;
+        justify-content: flex-end;
+    }
+
+    .nav_left img {
+        width: 100px;
+    }
+
+    /* ----------section02---------------------- */
+    .page02content {
+        width: 100%;
+        justify-content: center;
+        height: auto;
+        margin: 0 0 50px 0;
+    }
+
+    .page02content .cont {
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    .page02content .shake_hand {
+        padding: 0;
+        margin-bottom: 50px;
+    }
+
+    /* ----------section03---------------------- */
+
+    #section03 {
+        height: 1000px;
+    }
+
+    .page03article {
+        width: 80%;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .page03content::after {
+        top: 500px;
+        width: 100%;
+        height: 500px;
+    }
+
+    /* ------------------------輪轉區輪播-------------------- */
+
+
+
+    .slider {
+        width: 80%;
+    }
+
+    .slider-item {
+        width: 250px;
+        left: 40%;
+    }
+
+
+
+    /* ------------------page04--------------------- */
+    #section04 {
+        height: 1700px;
+    }
+
+    .page04bk {
+        background: linear-gradient(#ffffff 0%, #ffffff 40%, #A30000 40%, #A30000 100%);
+        height: 1300px;
+    }
+
+
+    .cardscontent_B {
+        width: 150px;
+        margin: 0 30px;
+    }
+
+    .page04section03 {
+        height: 250px;
+    }
+
+
+
+    /* ------------footer---------------------------------- */
+    .contactphone {
+        width: 100%
+    }
+
+    .footersection02 {
+        height: auto;
+    }
+
+    .footersection02row {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+    }
+
+    .contactmedia {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        height: auto;
+    }
+
+    .contactmedia_img {
+        display: flex;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    .contactmedia_img img {
+        margin: 0;
+    }
+
+    .footersection02 p {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 10px 0;
+    }
+
+    .subscriptionpaper {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    .subscriptionpaper_input {
+        justify-content: center;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .subscriptionpaper_input input {
+        margin-left: 0;
+        flex-grow: 1;
+    }
+}
+
+
+
+
+
+
+
+@media(max-width:788px) {
+
+    .page04bk {
+        background: linear-gradient(#ffffff 0%, #ffffff 30%, #A30000 30%, #A30000 100%);
+    }
+
+}
+
+
+
+
+@media(max-width:768px) {
+    html {
+        font-size: 16px;
+    }
+
+    /* ---------------------00 navbar---------------- */
+
+    #menu {
+        padding: 0 30px;
+    }
+
+    #navicon01 {
+        width: 50px;
+    }
+
+    /* ------------------------section03------------------- */
+    #section03 {
+        height: 1000px;
+    }
+
+    .page03article {
+        width: 100%;
+    }
+
+    /* ------------------------輪轉區輪播-------------------- */
+
+
+    .slider-item {
+        width: 200px;
+        left: 35%;
+    }
+
+    /* ------------------page04--------------------- */
+    #section04 {
+        height: 1550px;
+    }
+
+
+    .page04section01 h1 {
+        font-size: 2rem;
+    }
+
+    .page04section02 {
+        height: 200px;
+    }
+
+    .page04section03 {
+        height: 300px;
+    }
+
+    .page04section03 h1 {
+        font-size: 2rem;
+    }
+
+    .page04section04 {
+        height: 550px;
+    }
+
+    .cardscontent_B {
+        width: 110px;
+    }
+
+    .cardscontent_B img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .cardscontent_B p {
+        font-size: 1rem;
+    }
+
+    /* ------------footer---------------------------------- */
+
+    .footersection01 {
+        height: 250px;
+        align-items: center;
+    }
+
+    .footersection01 h3 {
+        margin-bottom: 16px;
+    }
+
+    .contactphone {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .contactphone p {
+        width: 100%;
+    }
+}
+
+@media(max-width:580px) {
+
+    .page04bk {
+        background: linear-gradient(#ffffff 0%, #ffffff 22%, #A30000 22%, #A30000 100%);
+
+    }
+}
+
+
+
+
+
+
+@media(max-width:576px) {
+    .container {
+        min-width: 100%;
+        padding: 0;
+    }
+
+    /* ------------------------section03------------------- */
+    #section03 {
+        height: 1100px;
+    }
+
+    .page03bk {
+        height: 1100px;
+        background: url(../image/about/about_5.jpg) no-repeat center/cover;
+    }
+
+    .page03article {
+        padding: 0 30px;
+    }
+
+
+    /* -----------------section04--------------------- */
+
+    .slider-item {
+        width: 180px;
+        left: 35%;
+    }
+
+
+    .page04section03 {
+        height: 250px;
+    }
+
+    .page04section04 {
+        height: 800px;
+    }
+
+    .cardscontent_B {
+        width: 90px;
+    }
+
+    .cardscontent_B img {
+        width: 80px;
+        height: 80px;
+    }
+
+
+
+
+    /* ------------- 01 secion06 start ------------------- */
+
+
+    .page06article {
+        padding: 50px 30;
+        text-align: center;
+    }
+
+
+}
+
+
+@media(max-width:450px) {
+    #section04 {
+        height: 1650px;
+    }
+
+    .page04bk {
+        background: linear-gradient(#ffffff 0%, #ffffff 17%, #A30000 17%, #A30000 100%);
+    }
+
+    .slider-item {
+        width: 150px;
+        left: 35%;
+    }
+
+    .page04section04 {
+        height: 900px;
+    }
+}
+
+@media(max-width:352px) {
+
+    .page04bk {
+        background: linear-gradient(#ffffff 0%, #ffffff 13%, #A30000 13%, #A30000 100%);
+    }
+
+    .slider-item {
+        width: 120px;
+        left: 35%;
+    }
+}
+
+
+
+
+
+/* font-family: 'League Spartan',
+        sans-serif;
+        font-weight: 800;
+        color: rgb(247, 226, 104); */
